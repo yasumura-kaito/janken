@@ -1,15 +1,23 @@
 package oit.is.z0346.kaizi.janken.model;
 
-import java.util.ArrayList;
-
 public class janken{
-  ArrayList<String> strList = new ArrayList<>();
+  String result;
 
-  public ArrayList<String> getNumList() {
-    return strList;
+  public void Janken(String hand){
+    if(hand.equals("Gu")){
+      result = "Draw!";
+    }else if(hand.equals("Choki")){
+      result = "Lose!";
+    }
+      result = "Win!";
   }
 
-  public void setNumList(ArrayList<String> numList) {
-    this.strList = strList;
+  public String getResult() {
+    return result;
   }
+
+  public void setResult(String result) {
+    this.result = result;
+  }
+
 }
