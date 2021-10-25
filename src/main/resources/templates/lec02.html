@@ -19,18 +19,14 @@
   <div th:if="${login_user}">
     hi [[${login_user}]]
   </div>
-  <a href="/lec02A">ぐー</a>
-  <a href="/lec02B">ちょき</a>
-  <a href="/lec02C">ぱー</a>
   </p>
   <p>
-  <div th:if="${your_hand}">あなたの手 [[${your_hand}]]</div>
+    <li th:each="match:${matches}">
+      [[${match.id}]] [[${match.user1}]] [[${match.user2}]] [[${match.user1Hand}]] [[${match.user2Hand}]]
+    </li>
   </p>
   <p>
-  <div th:if="${cpu_hand}">相手の手 [[${cpu_hand}]]</div>
-  </p>
-  <p>
-  <div th:if="${result}">結果 You [[${result}]]</div>
+    <li th:each="user : ${users}"><a th:href="@{/match(id=${user.id})}"> [[${user.name}]]</a></li>
   </p>
 </body>
 
