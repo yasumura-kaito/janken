@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -7,19 +7,14 @@
 
 <body>
   <p>
-  <a href="/lec02A">ぐー</a>
-  <a href="/lec02B">ちょき</a>
-  <a href="/lec02C">ぱー</a>
+    <a href="/battle?hand=1">ぐー</a>
+    <a href="/battle?hand=2">ちょき</a>
+    <a href="/battle?hand=3">ぱー</a>
   </p>
   <p>
-  <div th:if="${your_hand}">あなたの手 [[${your_hand}]]</div>
-  </p>
-  <p>
-  <div th:if="${cpu_hand}">相手の手 [[${cpu_hand}]]</div>
-  </p>
-  <p>
-  <div th:if="${result}">結果 You [[${result}]]</div>
-  </p>
+  <div th:if="${your_hand}">あなたの手 [[${janken1.your_hand}]]</div>
+  <div th:if="${cpu_hand}">相手の手 [[${janken1.cpu_hand}]]</div>
+  <div th:if="${result}">結果 You [[${janken1.result}]]</div>
   <a href="/lec02">もどる</a>
 </body>
 
