@@ -18,6 +18,7 @@ public class jankenAuthConfiguration extends WebSecurityConfigurerAdapter {
     auth.inMemoryAuthentication().withUser("user1").password(passwordEncoder().encode("p@ss")).roles("USER");
     auth.inMemoryAuthentication().withUser("user2").password(passwordEncoder().encode("c0rd")).roles("USER");
     auth.inMemoryAuthentication().withUser("ほんだ").password(passwordEncoder().encode("honda")).roles("USER");
+    auth.inMemoryAuthentication().withUser("いがき").password(passwordEncoder().encode("igaki")).roles("USER");
   }
 
   @Bean
