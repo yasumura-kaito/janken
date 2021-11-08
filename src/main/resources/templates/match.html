@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <a href="/logout">ログアウト</a>
+  <h1>Match</h1>
+  <h2>
+    <span th:text="${opponent}">[[${opponent}]]</span> V.S. <span th:text="${login_user}">[[${login_user}]]</span>
+  </h2>
+  <p>
+    <a th:href="@{/wait?hand=1(opponent=${opponent})}">ぐー</a>
+    <a th:href="@{/wait?hand=2(opponent=${opponent})}">ちょき</a>
+    <a th:href="@{/wait?hand=3(opponent=${opponent})}">ぱー</a>
+  </p>
+  <a href="/lec02">もどる</a>
+</body>
+
+</html>
